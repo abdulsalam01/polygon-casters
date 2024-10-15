@@ -59,12 +59,12 @@ There are severals approach implemented for handling and detects ship movements 
 - Make a Scheduler that run every 1 minute to fetch the current ship and store all of events in memory storage as `Set`
 
 ## Endpoints
-| Method | URI | Response | Description | 
-| :---:  | :---: | :---:  | | :---:     |
-| POST | `/auth/login`| `AuthManager.java` entity | Authentication request to 3rd party using `Credentials.java` |
-| GET | `/ship` | `ShipManager.java` entity | Get list of all ships available |
-| GET | `/port/ship` | Array Set of `MMSI ID` | Get the current ships that already in port/polygon |
-| GET | `/port/event` | Array Set of `MMSI ID` and `Event` | Get the ships within event status about which ship is `ENTER/LEAVE` |
+| Method | URI           | Response | Description | 
+| :---:  | :---:         | :---:    | :---:       |
+| POST   | `/auth/login` | `AuthManager.java` entity | Authentication request to 3rd party using `Credentials.java` |
+| GET    | `/ship`       | `ShipManager.java` entity | Get list of all ships available |
+| GET    | `/port/ship`  | Array Set of `MMSI ID` | Get the current ships that already in port/polygon |
+| GET    | `/port/event` | Array Set of `MMSI ID` and `Event` | Get the ships within event status about which ship is `ENTER/LEAVE` |
 
 ## Improvements
 - For handling a large data from external endpoints, we have to consider for saving the fetched data to own datastore and then get from own data store by chunking, limiting and offsetting to reduces the latency of display all data.
